@@ -1,0 +1,23 @@
+.product__animation
+  position: relative
+
+  img
+    max-width: 100%
+    animation: floating 2s ease-in-out alternate infinite
+
+  &__virus
+    position: absolute
+
+    lottie-player
+      width: 150px
+      height: 150px
+
+    &--1
+      top: -75px
+      left: -75px
+    &--2
+      top: 33%
+      right: -75px
+    &--3
+      top: 65%
+      left: -100px

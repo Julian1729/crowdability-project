@@ -1,0 +1,32 @@
+strong
+  font-weight: bold
+
+em
+  font-style: italic
+
+
+article
+
+  h2
+    font-size: 4rem
+
+  p
+    font-size: 2.3rem
+    margin-bottom: 16px
+    color: #fff
+    line-height: 3rem
+
+  &.use-drop-cap
+
+    p:first-of-type:first-letter
+      color: $primary
+      float: left
+      font-family: Georgia
+      font-size: 75px
+      line-height: 60px
+      padding-top: 4px
+      padding-right: 8px
+      padding-left: 3px
+
+  &.use-drop-cap--light
+    color: $neutral
