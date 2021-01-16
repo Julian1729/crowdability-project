@@ -238,6 +238,19 @@
 		"oS": 0,
 		"sct": 0
 		},
+	"/src/sass/modules/_breakpoints.sass": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"ec": 1,
+		"ft": 2,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/assets/css/_breakpoints.css",
+		"oF": 0,
+		"oS": 0,
+		"sct": 0
+		},
 	"/src/sass/modules/_colors.sass": {
 		"aP": 0,
 		"bl": 0,

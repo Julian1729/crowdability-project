@@ -1,10 +1,10 @@
 .butwait
     background-color: $primary
-    position: absolute
-    bottom: 0
-    left: 0
-    width: 100%
-    padding: 20px 150px
+    position: relative
+    bottom: -60px
+    margin-left: -40px
+    margin-right: -40px
+    padding: 20px 50px
 
     h5
       text-align: center
@@ -19,7 +19,8 @@
       border-right: 18px solid transparent
       border-top: 18px solid $primary
       position: absolute
-      top: 100%
+      top: calc(100% - 1px)
       left: 0
       right: 0
       margin: 0 auto
+      z-index: 1

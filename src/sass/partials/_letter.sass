@@ -39,9 +39,11 @@
 .numbers
   background-color: #EAE0CC
   position: relative
-  min-height: 600px
-  display: flex
-  align-items: center
+  // min-height: 600px
+
+  .container
+    display: flex
+    align-items: center
 
   &__lottie-bag
     width: 400px
@@ -77,6 +79,7 @@
 
   &__product
     position: relative
+    max-width: 100%
 
     img
       max-width: 40%
@@ -94,6 +97,18 @@
       font-weight: bold
       text-shadow: 2px 2px 8px rgba(0,0,0,0.4)
 
+@media screen and (max-width: $breakPoint1)
+  .how__product
+
+    h4
+      max-width: 80%
+      line-height: 3.5rem
+      font-size: 3rem
+      transform: translateX(10%)
+
+    img
+      max-width: 65%
+
 .discovered
   background-color: $neutral
 
@@ -110,7 +125,7 @@
     justify-content: center
 
   .product__animation
-    margin-top: 100px
+    margin: 100px 0
     max-width: 20%
 
     lottie-player
@@ -124,6 +139,10 @@
     img
       max-width: 100%
       width: 500px
+
+@media screen and (max-width: $breakPoint1)
+  .vaccine__product .product__animation
+    max-width: 50%
 
 .bigbusiness
   background-color: $primary
@@ -171,6 +190,15 @@
       max-width: 100%
       width: 500px
 
+@media screen and (max-width: $breakPoint1)
+  .profits
+
+    h2
+      font-size: 4rem
+
+    h3
+      font-size: 2rem
+
 .book
   background-color: $secondary
   text-align: center
@@ -201,12 +229,22 @@
   &__subheading
     margin: 50px auto
 
+@media screen and (max-width: $breakPoint1)
+  .book
+
+    h2
+      font-size: 4rem
+
 $formWidth: 800px
 
 .signup
   background-color: $neutral
   overflow-x: hidden
   position: relative
+  font-size: 1rem
+  // to adjust for lottie
+  padding-bottom: 300px !important
+  overflow: hidden
 
   .rain.hide
     display: none
@@ -226,7 +264,7 @@ $formWidth: 800px
     border: none
     border-top-left-radius: 30px
     border-top-right-radius: 30px
-    font-size: 3rem
+    font-size: 3em
     padding: 15px 30px
     color: #fff
     background-color: $secondary
@@ -236,20 +274,6 @@ $formWidth: 800px
 
     &::placeholder
       color: #333
-
-  // input
-  //   outline: none
-  //   width: 100%
-  //   appearance: none
-  //   border: none
-  //   border-radius: 30px
-  //   font-size: 3rem
-  //   padding: 15px 30px
-  //   color: #fff
-  //   background-color: $secondary
-  //   display: table
-  //   // margin-bottom: 15px
-  //   text-align: center
 
   button
     outline: none
@@ -262,7 +286,7 @@ $formWidth: 800px
     width: 35%
     // width: 100%
     color: #fff
-    font-size: 2rem
+    font-size: 1.4em
     text-transform: lowercase
     // border-radius: 30px
     border-bottom-left-radius: 30px
@@ -274,7 +298,7 @@ $formWidth: 800px
     img
       display: inline-block
       vertical-align: middle
-      width: 2rem
+      width: 2em
       position: relative
       left: 15px
       transition: left 300ms
@@ -294,13 +318,23 @@ $formWidth: 800px
     top: -50px
     color: $primary
     text-align: center
-    font-size: 3rem
+    font-size: 3em
     margin: 0 auto
     font-weight: 700
     display: table
 
   &__planting
-    position: relative
-    left: -40px
-    bottom: -60px
+    position: absolute
+    // left: -40px
+    // bottom: -60px
     max-width: 300px
+    left: 0
+
+@media screen and (max-width: $breakPoint1)
+  .signup__form
+    font-size: 0.6rem
+
+    button
+      width: 100%
+      padding: 15px
+      font-size: 2em

@@ -85,6 +85,11 @@ article.use-drop-cap--light p:first-of-type:first-letter {
   color: #A0A083;
 }
 
+@media screen and (max-width: 880px) {
+  article p {
+    font-size: 2rem;
+  }
+}
 .container {
   max-width: 1100px;
   margin: 0 auto;
@@ -113,11 +118,11 @@ article.use-drop-cap--light p:first-of-type:first-letter {
 
 .butwait {
   background-color: #4D6A6D;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  padding: 20px 150px;
+  position: relative;
+  bottom: -60px;
+  margin-left: -40px;
+  margin-right: -40px;
+  padding: 20px 50px;
 }
 .butwait h5 {
   text-align: center;
@@ -132,10 +137,11 @@ article.use-drop-cap--light p:first-of-type:first-letter {
   border-right: 18px solid transparent;
   border-top: 18px solid #4D6A6D;
   position: absolute;
-  top: 100%;
+  top: calc(100% - 1px);
   left: 0;
   right: 0;
   margin: 0 auto;
+  z-index: 1;
 }
 
 .rain {
@@ -182,7 +188,7 @@ article.use-drop-cap--light p:first-of-type:first-letter {
 .above-fold__inner {
   display: flex;
   height: 100%;
-  justify-content: center;
+  justify-content: space-around;
   flex-direction: column;
   align-items: center;
   max-width: 1100px;
@@ -217,6 +223,21 @@ article.use-drop-cap--light p:first-of-type:first-letter {
   }
   100% {
     transform: translateY(0);
+  }
+}
+@media screen and (max-width: 880px) {
+  .above-fold {
+    font-size: 1rem;
+  }
+  .above-fold__hero {
+    max-width: 35%;
+  }
+  .above-fold h1 {
+    font-size: 2.4rem;
+    line-height: 4rem;
+  }
+  .above-fold h1 span {
+    font-size: 2rem;
   }
 }
 .tagline {
@@ -272,7 +293,8 @@ article.use-drop-cap--light p:first-of-type:first-letter {
 .numbers {
   background-color: #EAE0CC;
   position: relative;
-  min-height: 600px;
+}
+.numbers .container {
   display: flex;
   align-items: center;
 }
@@ -311,6 +333,7 @@ article.use-drop-cap--light p:first-of-type:first-letter {
 }
 .how__product {
   position: relative;
+  max-width: 100%;
 }
 .how__product img {
   max-width: 40%;
@@ -329,6 +352,17 @@ article.use-drop-cap--light p:first-of-type:first-letter {
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
 }
 
+@media screen and (max-width: 880px) {
+  .how__product h4 {
+    max-width: 80%;
+    line-height: 3.5rem;
+    font-size: 3rem;
+    transform: translateX(10%);
+  }
+  .how__product img {
+    max-width: 65%;
+  }
+}
 .discovered {
   background-color: #A0A083;
 }
@@ -346,7 +380,7 @@ article.use-drop-cap--light p:first-of-type:first-letter {
   justify-content: center;
 }
 .vaccine .product__animation {
-  margin-top: 100px;
+  margin: 100px 0;
   max-width: 20%;
 }
 .vaccine .product__animation lottie-player {
@@ -362,6 +396,11 @@ article.use-drop-cap--light p:first-of-type:first-letter {
   width: 500px;
 }
 
+@media screen and (max-width: 880px) {
+  .vaccine__product .product__animation {
+    max-width: 50%;
+  }
+}
 .bigbusiness {
   background-color: #4D6A6D;
 }
@@ -409,6 +448,14 @@ article.use-drop-cap--light p:first-of-type:first-letter {
   width: 500px;
 }
 
+@media screen and (max-width: 880px) {
+  .profits h2 {
+    font-size: 4rem;
+  }
+  .profits h3 {
+    font-size: 2rem;
+  }
+}
 .book {
   background-color: #798478;
   text-align: center;
@@ -440,10 +487,18 @@ article.use-drop-cap--light p:first-of-type:first-letter {
   margin: 50px auto;
 }
 
+@media screen and (max-width: 880px) {
+  .book h2 {
+    font-size: 4rem;
+  }
+}
 .signup {
   background-color: #A0A083;
   overflow-x: hidden;
   position: relative;
+  font-size: 1rem;
+  padding-bottom: 300px !important;
+  overflow: hidden;
 }
 .signup .rain.hide {
   display: none;
@@ -463,7 +518,7 @@ article.use-drop-cap--light p:first-of-type:first-letter {
   border: none;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
-  font-size: 3rem;
+  font-size: 3em;
   padding: 15px 30px;
   color: #fff;
   background-color: #798478;
@@ -483,7 +538,7 @@ article.use-drop-cap--light p:first-of-type:first-letter {
   margin: 0 auto;
   width: 35%;
   color: #fff;
-  font-size: 2rem;
+  font-size: 1.4em;
   text-transform: lowercase;
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
@@ -494,7 +549,7 @@ article.use-drop-cap--light p:first-of-type:first-letter {
 .signup button img {
   display: inline-block;
   vertical-align: middle;
-  width: 2rem;
+  width: 2em;
   position: relative;
   left: 15px;
   transition: left 300ms;
@@ -513,18 +568,27 @@ article.use-drop-cap--light p:first-of-type:first-letter {
   top: -50px;
   color: #4D6A6D;
   text-align: center;
-  font-size: 3rem;
+  font-size: 3em;
   margin: 0 auto;
   font-weight: 700;
   display: table;
 }
 .signup__planting {
-  position: relative;
-  left: -40px;
-  bottom: -60px;
+  position: absolute;
   max-width: 300px;
+  left: 0;
 }
 
+@media screen and (max-width: 880px) {
+  .signup__form {
+    font-size: 0.6rem;
+  }
+  .signup__form button {
+    width: 100%;
+    padding: 15px;
+    font-size: 2em;
+  }
+}
 .sticky-cta {
   padding: 15px 40px;
   background-color: #A5243D;
