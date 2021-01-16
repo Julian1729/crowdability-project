@@ -169,22 +169,6 @@
 		"oAP": "/index.html",
 		"oF": 0
 		},
-	"/mixins.html": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/mixins.html",
-		"oF": 0
-		},
-	"/product-animation.html": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/product-animation.html",
-		"oF": 0
-		},
 	"/src/pug/includes/footer.pug": {
 		"cB": 0,
 		"cOD": 1,
