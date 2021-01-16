@@ -43,14 +43,6 @@
   display: flex
   align-items: center
 
-  &__lottie-rain
-    width: 100%
-    max-height: 100%
-    position: absolute
-    top: 0
-    left: 0
-    overflow: hidden
-
   &__lottie-bag
     width: 400px
     height: 400px
@@ -79,32 +71,6 @@
 
     h4
       font-size: 3.5rem
-
-  &__subtitle
-    background-color: $primary
-    position: absolute
-    bottom: 0
-    left: 0
-    width: 100%
-    padding: 20px 150px
-
-    h5
-      text-align: center
-      width: 100%
-      font-size: 2rem
-      color: #fff
-
-    .arrow-down
-      width: 0
-      height: 0
-      border-left: 18px solid transparent
-      border-right: 18px solid transparent
-      border-top: 18px solid $primary
-      position: absolute
-      top: 100%
-      left: 0
-      right: 0
-      margin: 0 auto
 
 .how
   background-color: #C9ADA1
@@ -153,12 +119,188 @@
 
   &__patent
     display: table
-    margin: 10px auto
+    margin: 40px auto
 
     img
-      box-shadow: 0 30px 8px -15px rgba(0,0,0,0.4)
-      transition: all 300ms
+      max-width: 100%
+      width: 500px
 
-      &:hover
-        box-shadow: 0 0 0 0 rgba(0,0,0,0.4)
-        transform: scale(0.95)
+.bigbusiness
+  background-color: $primary
+
+  h2
+    color: #fff
+    font-weight: bold
+    text-align: center
+    margin-bottom: 50px
+
+  &__amazon
+    margin: 40px auto
+
+    img
+      max-width: 100%
+      width: 500px
+
+.profits
+  background-color: $neutral
+  position: relative
+
+  lottie-player
+    // width: 1000px
+    max-width: 85%
+    margin: 0 auto
+    text-align: center
+
+  h2
+    text-align: center
+    font-size: 5rem
+    font-weight: bold
+    color: #fff
+    margin-bottom: 15px
+
+  h3
+    font-size: 4rem
+    font-weight: bold
+    color: #fff
+    text-align: center
+
+  &__chart
+    margin: 40px auto
+
+    img
+      max-width: 100%
+      width: 500px
+
+.book
+  background-color: $secondary
+  text-align: center
+
+  h2
+    text-align: center
+    font-size: 5rem
+    font-weight: bold
+    color: #fff
+
+  &__subtitle
+    font-size: 2.3rem
+    text-align: center
+    font-weight: 300
+    margin-bottom: 10px
+
+  &__heading
+    margin-bottom: 50px
+
+  &__product
+    display: block
+    width: 275px
+    margin: 0 auto
+    max-width: 100%
+    margin-bottom: 50px
+    opacity: 0
+
+  &__subheading
+    margin: 50px auto
+
+$formWidth: 800px
+
+.signup
+  background-color: $neutral
+  overflow-x: hidden
+  position: relative
+
+  .rain.hide
+    display: none
+
+  &__form
+    margin: 0 auto
+    width: $formWidth
+    max-width: 100%
+    opacity: 0
+    z-index: 1
+    position: relative
+
+  input
+    outline: none
+    width: 100%
+    appearance: none
+    border: none
+    border-top-left-radius: 30px
+    border-top-right-radius: 30px
+    font-size: 3rem
+    padding: 15px 30px
+    color: #fff
+    background-color: $secondary
+    display: table
+    // margin-bottom: 15px
+    text-align: center
+
+    &::placeholder
+      color: #333
+
+  // input
+  //   outline: none
+  //   width: 100%
+  //   appearance: none
+  //   border: none
+  //   border-radius: 30px
+  //   font-size: 3rem
+  //   padding: 15px 30px
+  //   color: #fff
+  //   background-color: $secondary
+  //   display: table
+  //   // margin-bottom: 15px
+  //   text-align: center
+
+  button
+    outline: none
+    appearance: none
+    border: none
+    background-color: $primary
+    display: table
+    padding: 20px 30px
+    margin: 0 auto
+    width: 35%
+    // width: 100%
+    color: #fff
+    font-size: 2rem
+    text-transform: lowercase
+    // border-radius: 30px
+    border-bottom-left-radius: 30px
+    border-bottom-right-radius: 30px
+    cursor: pointer
+    box-shadow: 0 20px 10px -20px rgba(0,0,0,0.4)
+    transition: all 300ms
+
+    img
+      display: inline-block
+      vertical-align: middle
+      width: 2rem
+      position: relative
+      left: 15px
+      transition: left 300ms
+
+    &:hover
+      box-shadow: none
+      // background: darken($primary, 10)
+      background-color: $secondary
+      width: $formWidth
+
+    &:hover img
+      left: 30px
+
+  &__thanks
+    opacity: 0
+    position: relative
+    top: -50px
+    color: $primary
+    text-align: center
+    font-size: 3rem
+    margin: 0 auto
+    font-weight: 700
+    display: table
+
+  &__planting
+    position: relative
+    left: -40px
+    bottom: -60px
+    max-width: 300px

@@ -87,7 +87,7 @@
 		},
 	"/assets/images/image6.png": {
 		"ft": 32768,
-		"iS": 226364,
+		"iS": 218329,
 		"oA": 0,
 		"oAP": "/assets/images/image6.png",
 		"oF": 0,
@@ -129,6 +129,16 @@
 		"opt": 0,
 		"q": 100
 		},
+	"/assets/images/send-icon.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/images/send-icon.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
 	"/assets/js/app-min.js": {
 		"bF": 0,
 		"ft": 64,
@@ -159,6 +169,22 @@
 		"oAP": "/index.html",
 		"oF": 0
 		},
+	"/mixins.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/mixins.html",
+		"oF": 0
+		},
+	"/product-animation.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/product-animation.html",
+		"oF": 0
+		},
 	"/src/pug/includes/footer.pug": {
 		"cB": 0,
 		"cOD": 1,
@@ -166,6 +192,16 @@
 		"hM": 0,
 		"oA": 1,
 		"oAP": "/footer.html",
+		"oF": 0,
+		"oS": 0
+		},
+	"/src/pug/includes/mixins.pug": {
+		"cB": 0,
+		"cOD": 1,
+		"ft": 512,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/mixins.html",
 		"oF": 0,
 		"oS": 0
 		},
@@ -228,6 +264,19 @@
 		"oS": 0,
 		"sct": 0
 		},
+	"/src/sass/partials/_butwait.sass": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"ec": 1,
+		"ft": 2,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/assets/css/_butwait.css",
+		"oF": 0,
+		"oS": 0,
+		"sct": 0
+		},
 	"/src/sass/partials/_layout.sass": {
 		"aP": 0,
 		"bl": 0,
@@ -267,6 +316,19 @@
 		"oS": 0,
 		"sct": 0
 		},
+	"/src/sass/partials/_rain.sass": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"ec": 1,
+		"ft": 2,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/assets/css/_rain.css",
+		"oF": 0,
+		"oS": 0,
+		"sct": 0
+		},
 	"/src/sass/partials/_reset.sass": {
 		"aP": 0,
 		"bl": 0,
@@ -276,6 +338,19 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "/assets/css/_reset.css",
+		"oF": 0,
+		"oS": 0,
+		"sct": 0
+		},
+	"/src/sass/partials/_sticky-cta.sass": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"ec": 1,
+		"ft": 2,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/assets/css/_sticky-cta.css",
 		"oF": 0,
 		"oS": 0,
 		"sct": 0
@@ -1833,7 +1908,7 @@
 	"externalServerAddress": "http://localhost:8888",
 	"gitIgnoreBuildFolder": 1,
 	"hideConfigFile": 0,
-	"jsCheckerReservedNamesString": "",
+	"jsCheckerReservedNamesString": "inView",
 	"jsHintFlags2": {
 		"asi": {
 			"active": 0,

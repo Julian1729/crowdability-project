@@ -46,6 +46,7 @@ html, body {
   height: 100%;
   font-size: 62.5%;
   font-family: "Libre Franklin", sans-serif;
+  scroll-behavior: smooth;
 }
 
 * {
@@ -80,7 +81,7 @@ article.use-drop-cap p:first-of-type:first-letter {
   padding-right: 8px;
   padding-left: 3px;
 }
-article.use-drop-cap--light {
+article.use-drop-cap--light p:first-of-type:first-letter {
   color: #A0A083;
 }
 
@@ -91,6 +92,59 @@ article.use-drop-cap--light {
 
 .wrapper section {
   padding: 60px 40px;
+}
+.wrapper section.use-butwait {
+  padding-bottom: 100px;
+  position: relative;
+}
+
+.lightbox {
+  display: table;
+}
+.lightbox img {
+  box-shadow: 0 30px 8px -15px rgba(0, 0, 0, 0.4);
+  transition: all 300ms;
+  display: table;
+}
+.lightbox img:hover {
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.4);
+  transform: scale(0.95);
+}
+
+.butwait {
+  background-color: #4D6A6D;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 150px;
+}
+.butwait h5 {
+  text-align: center;
+  width: 100%;
+  font-size: 2rem;
+  color: #fff;
+}
+.butwait .arrow-down {
+  width: 0;
+  height: 0;
+  border-left: 18px solid transparent;
+  border-right: 18px solid transparent;
+  border-top: 18px solid #4D6A6D;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+.rain {
+  width: 100%;
+  max-height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
 }
 
 .product__animation {
@@ -151,7 +205,7 @@ article.use-drop-cap--light {
   font-size: 3rem;
   display: block;
   font-weight: bold;
-  color: #710000;
+  color: #73AB84;
 }
 
 @keyframes floating {
@@ -222,14 +276,6 @@ article.use-drop-cap--light {
   display: flex;
   align-items: center;
 }
-.numbers__lottie-rain {
-  width: 100%;
-  max-height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  overflow: hidden;
-}
 .numbers__lottie-bag {
   width: 400px;
   height: 400px;
@@ -258,32 +304,6 @@ article.use-drop-cap--light {
 }
 .numbers__headline h4 {
   font-size: 3.5rem;
-}
-.numbers__subtitle {
-  background-color: #4D6A6D;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  padding: 20px 150px;
-}
-.numbers__subtitle h5 {
-  text-align: center;
-  width: 100%;
-  font-size: 2rem;
-  color: #fff;
-}
-.numbers__subtitle .arrow-down {
-  width: 0;
-  height: 0;
-  border-left: 18px solid transparent;
-  border-right: 18px solid transparent;
-  border-top: 18px solid #4D6A6D;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
 }
 
 .how {
@@ -335,13 +355,195 @@ article.use-drop-cap--light {
 }
 .vaccine__patent {
   display: table;
-  margin: 10px auto;
+  margin: 40px auto;
 }
 .vaccine__patent img {
-  box-shadow: 0 30px 8px -15px rgba(0, 0, 0, 0.4);
+  max-width: 100%;
+  width: 500px;
+}
+
+.bigbusiness {
+  background-color: #4D6A6D;
+}
+.bigbusiness h2 {
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.bigbusiness__amazon {
+  margin: 40px auto;
+}
+.bigbusiness__amazon img {
+  max-width: 100%;
+  width: 500px;
+}
+
+.profits {
+  background-color: #A0A083;
+  position: relative;
+}
+.profits lottie-player {
+  max-width: 85%;
+  margin: 0 auto;
+  text-align: center;
+}
+.profits h2 {
+  text-align: center;
+  font-size: 5rem;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 15px;
+}
+.profits h3 {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+}
+.profits__chart {
+  margin: 40px auto;
+}
+.profits__chart img {
+  max-width: 100%;
+  width: 500px;
+}
+
+.book {
+  background-color: #798478;
+  text-align: center;
+}
+.book h2 {
+  text-align: center;
+  font-size: 5rem;
+  font-weight: bold;
+  color: #fff;
+}
+.book__subtitle {
+  font-size: 2.3rem;
+  text-align: center;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+.book__heading {
+  margin-bottom: 50px;
+}
+.book__product {
+  display: block;
+  width: 275px;
+  margin: 0 auto;
+  max-width: 100%;
+  margin-bottom: 50px;
+  opacity: 0;
+}
+.book__subheading {
+  margin: 50px auto;
+}
+
+.signup {
+  background-color: #A0A083;
+  overflow-x: hidden;
+  position: relative;
+}
+.signup .rain.hide {
+  display: none;
+}
+.signup__form {
+  margin: 0 auto;
+  width: 800px;
+  max-width: 100%;
+  opacity: 0;
+  z-index: 1;
+  position: relative;
+}
+.signup input {
+  outline: none;
+  width: 100%;
+  appearance: none;
+  border: none;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  font-size: 3rem;
+  padding: 15px 30px;
+  color: #fff;
+  background-color: #798478;
+  display: table;
+  text-align: center;
+}
+.signup input::placeholder {
+  color: #333;
+}
+.signup button {
+  outline: none;
+  appearance: none;
+  border: none;
+  background-color: #4D6A6D;
+  display: table;
+  padding: 20px 30px;
+  margin: 0 auto;
+  width: 35%;
+  color: #fff;
+  font-size: 2rem;
+  text-transform: lowercase;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 20px 10px -20px rgba(0, 0, 0, 0.4);
   transition: all 300ms;
 }
-.vaccine__patent img:hover {
-  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.4);
-  transform: scale(0.95);
+.signup button img {
+  display: inline-block;
+  vertical-align: middle;
+  width: 2rem;
+  position: relative;
+  left: 15px;
+  transition: left 300ms;
+}
+.signup button:hover {
+  box-shadow: none;
+  background-color: #798478;
+  width: 800px;
+}
+.signup button:hover img {
+  left: 30px;
+}
+.signup__thanks {
+  opacity: 0;
+  position: relative;
+  top: -50px;
+  color: #4D6A6D;
+  text-align: center;
+  font-size: 3rem;
+  margin: 0 auto;
+  font-weight: 700;
+  display: table;
+}
+.signup__planting {
+  position: relative;
+  left: -40px;
+  bottom: -60px;
+  max-width: 300px;
+}
+
+.sticky-cta {
+  padding: 15px 40px;
+  background-color: #A5243D;
+  color: #fff;
+  font-size: 1.4rem;
+  border-radius: 40px;
+  text-decoration: none;
+  letter-spacing: 1px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  box-shadow: 0 8px 8px -6px rgba(0, 0, 0, 0.4);
+  transition: background-color 300ms;
+  transition: box-shadow 300ms;
+  transition: padding 300ms;
+  opacity: 0;
+}
+.sticky-cta:hover {
+  background-color: #cb2c4b;
+  box-shadow: none;
+  padding: 15px 55px;
 }

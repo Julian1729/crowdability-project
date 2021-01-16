@@ -11,9 +11,13 @@ html(lang="en" dir="ltr")
     script(src='https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js')
     //- Featherlight Ligthbox
     link(href="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.css" type="text/css" rel="stylesheet")
+    //- Animate.css
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css")
     link(rel="stylesheet" href="/assets/css/main.css")
     
   body
+    
+    include includes/mixins.pug
     
     .wrapper
       
@@ -76,9 +80,8 @@ html(lang="en" dir="ltr")
               //-   lottie-player(src='https://assets4.lottiefiles.com/packages/lf20_SyUX5x.json' background='transparent' speed='1' style='width: 300px; height: 300px;' loop='' autoplay='')
       
       section.numbers
-        
-        .numbers__lottie-rain
-          lottie-player(src='https://assets5.lottiefiles.com/packages/lf20_0ozuxa18/celebration_33/celebration_draft.json' background='transparent' speed='1' loop='' autoplay='')
+      
+        +rain()
       
         .numbers__lottie-bag
           lottie-player(src='https://assets5.lottiefiles.com/packages/lf20_jOH2sn.json' background='transparent' speed='1' style='width: 400px; height: 400px;' loop='' autoplay='')
@@ -95,9 +98,8 @@ html(lang="en" dir="ltr")
 
             h4 And that’s all with just one investment!
           
-          .numbers__subtitle
+          +butwait()
             h5 I know that might sound far fetched...But in a moment, you’ll see why I’m so confident in this forecast.
-            .arrow-down
       
       section.how
         
@@ -177,10 +179,171 @@ html(lang="en" dir="ltr")
 
             p In fact, here’s the patent — I’m putting it right up on your screen so you can see it in black and white.
             
-            a.vaccine__patent(data-featherlight="/assets/images/image7.jpg" href="#")
-              img(src="/assets/images/image7.jpg" width="500" height="645" alt="Coronavirus killing technology patent" title="Coronavirus killing technology patent")
+            a.vaccine__patent.lightbox(data-featherlight="/assets/images/image7.jpg" href="#")
+              img(src="/assets/images/image7.jpg" alt="Coronavirus killing technology patent" title="Coronavirus killing technology patent")
 
+      section.bigbusiness
+          
+        .container
+          
+          article.use-drop-cap.use-drop-cap--light
+          
+            h2 How BIG This Business Could Become!
+            
+            p Unlike many complicated Silicon Valley startups that give everything away for free and hope to make money down the road...
+            
+            p This company’s business model is very simple and straightforward…
 
+            p Basically, it’s going to sell its products to consumers like us, and to businesses, too.
+
+            p And its devices will cost about $1,000.
+
+            p Now, at first blush, that number might sound high...
+
+            p But that price-point is comparable to the high-end HEPA filters you can buy currently...
+            
+            a.bigbusiness__amazon.lightbox(data-featherlight="/assets/images/image4.png" href="#")
+              img(src="/assets/images/image4.png" alt="HEPA filters priced just under and over $1000" title="HEPA filters around $1000")
+            
+            p And keep in mind, this new device is infinitely more powerful and effective than standard HEPA filters.
+
+            p So now let’s talk about how big this business could potentially get...
+            
+            p 
+              | There are roughly 
+              strong 128 million households 
+              | in the United States...
+
+            p And another 
+              strong 32 million businesses.
+
+            p So the potential market in the U.S. alone is very, very large.
+
+            p In fact, according to Grand View Research, in 2019 — that’s before the pandemic — the global air purifier market was valued at $8 billion.  
+
+            p An $8 billion market.  That was huge already. 
+
+            p But because of the pandemic, a research company called Arizton is forecasting the market will soon reach $90 billion.
+
+            p So let’s say this startup we’ve been telling you about is able to capture even just a tiny fraction of this market...
+      
+      section.profits.use-butwait
+        
+        article.use-drop-cap.use-butwait
+          
+          .container
+      
+            h2 How much could early investors like you make in profits?
+            h3 (HINT: It could be as much as $1.2 million!)
+            
+            lottie-player(src='https://assets10.lottiefiles.com/private_files/lf30_aXRkcv.json' background='transparent' speed='0.6' loop='' autoplay='')
+              
+            p Well, today, you have the chance to invest in this company at a market value of just $5 million...
+
+            p So, even at the LOWEST end of our forecasts, you’d be selling your stake at a market value of $150 million. 
+
+            p 
+              strong That’s a 2,900% profit. 
+            
+            +lightboxImage("assets/images/image3.png", "profits__chart")
+            
+            p Again, that’s like turning every $1,000 you invest into $30,000... 
+
+            p And every $10,000 you invest into $300,000!
+
+            p And if this company ends up hitting the top end of your sales projections...
+
+            p Well, then you’re talking about potential profits of 
+              strong 11,900%!
+            
+            +lightboxImage("assets/images/image2.png", "profits__chart")
+            
+            p That’s like turning a $1,000 investment into $120,000...
+
+            p And $10,000 into $1.2 million!
+
+            p And keep in mind, this is all based on the company capturing far less than 1% of the overall market...
+
+            p And furthermore, it doesn’t take into account how vastly superior this company’s technology is compared to its competitors. 
+
+            p That’s why we told you earlier that our 2,900% profit forecast might turn out to be conservative.
+
+            p And it helps explain why we’ve been so excited to share this opportunity with you. 
+
+            p Frankly, this could become one of the most profitable investments that we’ve ever identified.
+            
+          +butwait()
+            h5 And that’s why I’ve compiled all the details about this opportunity into a special new research report — a report that I’m going to be releasing here in just a moment...
+      
+      section.book.use-butwait
+        
+        .container
+          
+        article
+            
+          img.book__product.animate__animated#js-book-image(src="/assets/images/image6.png")
+          
+          p.book__subtitle It’s called: 
+          h2.book__heading The COVID-Killer: How to Turn $10,000 into $300,000 With One Investment.
+
+          p 
+            | And in just a minute, I’ll show you how to download a 
+            strong 
+              em FREE 
+            | copy of it right now.
+
+          p But before I do, I want to tell you about another investment I recently identified...
+          
+          h2.book__subheading Only 250 members will be able to take advantage of this offer!
+          
+          p You see, early-stage companies are regulated by the SEC…
+
+          p And one of the things the SEC regulates is how much money these companies can raise — and in turn, how many investors they can accept.
+
+          p Therefore, I need to keep a strict limit on how many people can join this service… 
+
+          p That’s why I can only open up a small number of new membership spots today.
+
+          p Basically, this is how Wayne and I ensure that all of our subscribers can get into these deals.
+
+          p 
+            | So, even though we’ve had more than 
+            strong 100,000 
+            | people join our free and paid newsletters...
+
+          p 
+            | We can only allow 
+            strong 250 
+            | of you to take advantage of this special offer today.
+
+          p Once those 250 spots have been filled, we’re shutting this offer down, possibly for good.
+
+          p So if you’re interested in learning more and reviewing this special offer, you can click the link below right now…
+      
+        +butwait()
+          h5 So if you’re interested in learning more and reviewing this special offer, you can click the link below right now…
+
+      section.signup#signup-section
+        
+        +rain('hide js-signup-confirmation-lottie')
+        
+        .container
+          
+          .signup__form.animate__animated#js-signup-form-container
+            form#js-signup-form
+              input(type="email" name="email" placeholder="email address" required autocomplete="email")
+              button#js-signup-submit.signup__submit 
+                span count me in
+                img(src="/assets/images/send-icon.svg")
+          
+          .signup__thanks.animate__animated#js-signup-confirmation
+            p 
+              |You know a good deal when you see one my friend! I'll be in touch 
+              br 
+              | - Matt
+                
+        
+        .signup__planting
+          lottie-player(src='https://assets9.lottiefiles.com/private_files/lf30_tcuqw7ib.json' background='transparent' speed='0.6' loop='' autoplay='')        
       
   include includes/footer.pug
-    

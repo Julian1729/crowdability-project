@@ -1,0 +1,12 @@
+mixin lightboxImage(url, classes)
+  a.lightbox(class=classes data-featherlight=url href="#")
+    img(src=url)
+
+mixin butwait()
+  .butwait
+    block
+    .arrow-down
+
+mixin rain(classes)
+  .rain(class=classes)
+    lottie-player(src='https://assets5.lottiefiles.com/packages/lf20_0ozuxa18/celebration_33/celebration_draft.json' background='transparent' speed='1' loop='' autoplay='')
